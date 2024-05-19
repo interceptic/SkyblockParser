@@ -13,7 +13,7 @@ bot = commands.Bot(intents=intents, slash_command_prefix='/')
 with open("config.json", "r") as conf:
     config = json.load(conf)
 
-ALLOWED_USER_IDS = [config['ALLOWED_USER_IDS']]
+ALLOWED_USER_ID = config['ALLOWED_USER_ID']
 
 @bot.event
 async def on_ready():
@@ -28,7 +28,7 @@ async def ign(
     username: str,
     remove: bool,
 ):
-    if interaction.author.id in ALLOWED_USER_IDS:
+    if interaction.author.id == ALLOWED_USER_ID:
         if remove:
             if username in ign_list:
                 ign_list.remove(username) 
@@ -52,7 +52,7 @@ async def update(interaction: discord.Interaction):
     m = round(a)
     if m == 0:
         m = 1
-    if interaction.author.id in ALLOWED_USER_IDS:    
+    if interaction.author.id == ALLOWED_USER_ID:    
         await interaction.response.send_message((f"Updating the embed with {ign_list}, please wait {m} minutes :)"), ephemeral=True)
         await update_message()
         return
@@ -61,7 +61,7 @@ async def update(interaction: discord.Interaction):
 
 @bot.slash_command(name='list', description ="What igns are currently in the list!")
 async def list(interaction: discord.Interaction):
-    if interaction.author.id in ALLOWED_USER_IDS:    
+    if interaction.author.id == ALLOWED_USER_ID:    
         await interaction.response.send_message((f"{ign_list}"), ephemeral=True)
     else:
         await interaction.response.send_message("Sorry, you don't have permission to run this command :( ", ephemeral=True)
@@ -144,7 +144,7 @@ async def update_message():
 
 @bot.slash_command(name='purses', description='Purse of users')
 async def purses(interaction: discord.Interaction):
-    if interaction.author.id in ALLOWED_USER_IDS:       
+    if interaction.author.id == ALLOWED_USER_ID:       
         embed = discord.Embed(
                 title='The purse of your accounts: ',
                 description='',
