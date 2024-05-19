@@ -104,9 +104,9 @@ async def send_embed():
         for i in range(0, len(ign_list)):
             purse = await thingg(ign_list[i])
             if 'B' in purse:
-                embed.add_field(name=f"{ign_list[i]} purse: \n<:emerald:1240072151302672525> {purse}", value='', inline=False)
+                embed.add_field(name=f"{ign_list[i]} purse: \n {purse}", value='', inline=False)
             else:
-                embed.add_field(name=f"{ign_list[i]} purse: \n<:golden:1240063669375602718> {purse}", value='', inline=False)
+                embed.add_field(name=f"{ign_list[i]} purse: \n {purse}", value='', inline=False)
         channel = bot.get_channel(config['CHANNEL'])
         embed.set_footer(text='Made by interceptic', icon_url='https://cdn.discordapp.com/avatars/1227394151847297148/a_17e8e189d32a91dc7a40f25a1ebcd9c0.webp?size=160')
         embed.timestamp = datetime.datetime.now()
@@ -127,9 +127,9 @@ async def update_message():
         for i in range(len(ign_list)):
             purse = await thingg(ign_list[i])
             if 'B' in purse:
-                embed.add_field(name=f"{ign_list[i]} purse: \n<:emerald:1240072151302672525> {purse}", value='', inline=False)
+                embed.add_field(name=f"{ign_list[i]} purse: \n {purse}", value='', inline=False)
             else:
-                embed.add_field(name=f"{ign_list[i]} purse: \n<:golden:1240063669375602718> {purse}", value='', inline=False)
+                embed.add_field(name=f"{ign_list[i]} purse: \n{purse}", value='', inline=False)
         
         embed.set_footer(text='Made by interceptic', icon_url='https://cdn.discordapp.com/avatars/1227394151847297148/a_17e8e189d32a91dc7a40f25a1ebcd9c0.webp?size=160')
         embed.timestamp = datetime.datetime.now()
@@ -154,9 +154,9 @@ async def purses(interaction: discord.Interaction):
         for i in range(0, len(ign_list)):
             purse = await thingg(ign_list[i])
             if 'B' in purse:
-                embed.add_field(name=f"{ign_list[i]} purse: \n<:emerald:1240072151302672525> {purse}", value='', inline=False)
+                embed.add_field(name=f"{ign_list[i]} purse: \n{purse}", value='', inline=False)
             else:
-                embed.add_field(name=f"{ign_list[i]} purse: \n<:golden:1240063669375602718> {purse}", value='', inline=False)
+                embed.add_field(name=f"{ign_list[i]} purse: \n{purse}", value='', inline=False)
         channel = interaction.channel
         embed.set_footer(text='Made by interceptic', icon_url='https://cdn.discordapp.com/avatars/1227394151847297148/a_17e8e189d32a91dc7a40f25a1ebcd9c0.webp?size=160')
         embed.timestamp = datetime.datetime.now()
