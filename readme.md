@@ -14,4 +14,4 @@ _[Located Here](https://discord.com/developers/applications/)_
 
 _First follow the Steps category and put your info in the config.json file._
 
-- _Next, Run `pip install -r requirements.txt` then run `python3 main.py`_
+- _Next run `pip install -r requirements.txt` then run `python3 main.py`_
