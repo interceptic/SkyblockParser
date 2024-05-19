@@ -16,7 +16,7 @@ _First follow the Steps category and put your info in the config.json file._
 
 - _Next run `pip install -r requirements.txt` then run `python3 main.py`_
 
-# DOCS:
+# Docs:
 * **Run the /update command if you want to update the embed early, it will automatically update every 30 minutes. The bot will tell you how long it will take to parse the data**
 * **Run the /purse command if you want a new embed (the bot wont update it)**
 * **Run the /ign command to add or remove an ign from the list that it will check**
