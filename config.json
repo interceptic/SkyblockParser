@@ -1,0 +1,9 @@
+{
+    "TOKEN": "BOT_TOKEN_HERE",
+    "CHANNEL": 1, 
+    "ALLOWED_USER_IDS": [
+        1, 
+        2, 
+        3 
+    ]  
+}
