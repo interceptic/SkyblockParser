@@ -50,6 +50,8 @@ async def update(interaction: discord.Interaction):
     s = len(ign_list) * 20
     a = s / 60
     m = round(a)
+    if m == 0:
+        m = 1
     if interaction.author.id in ALLOWED_USER_IDS:    
         await interaction.response.send_message((f"Updating the embed with {ign_list}, please wait {m} minutes :)"), ephemeral=True)
         await update_message()
