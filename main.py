@@ -80,10 +80,10 @@ def save_list():
         json.dump(ign_list, f)
 
 async def main():
-    if message_id is None:
-        await send_embed()
-    else:
-        while True:
+    while True:
+        if message_id is None:
+            await send_embed()
+        else:
             try:
                 await update_message()
             except Exception as e:
